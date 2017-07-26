@@ -1,4 +1,10 @@
+# G115 testing in SLAC BlueFors cryostat -- x6 stack and tower, no shielding
+#
+# 20170719  Michael Kelsey
+# 20170726  Add tower, add G124 w/o hits in pos 4
+
 /CDMS/Detector slac
+/CDMS/SLACB33/Tower snolab
 
 /CDMS/UseShield slac			# Use mu-metal shielding only
 /CDMS/Shield/RemoveLayer Gamma
@@ -6,9 +12,12 @@
 
 /control/execute G115_zip.mac		# Define G115 layout
 
+/CDMS/Zip/IsSensitive false		# Turn off hits for G124
+
 /CDMS/Layout/ZipName G115 6
 /CDMS/Layout/ZipCode Zip  6
-/CDMS/Layout/ZipName NONE 1
+/CDMS/Layout/ZipCode CDMSlite3 4
+/CDMS/Layout/ZipName NONE 1 2 3 5
 
 /CDMS/Mechanical table
 /CDMS/Table/Material G4_Al

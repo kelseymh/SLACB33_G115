@@ -1,3 +1,10 @@
+# Job output files: logs, ROOT data
+*.log
+*.root
+
+# Emacs backup files
+*~
+
 # Prerequisites
 *.d
 

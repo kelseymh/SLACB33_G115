@@ -1,0 +1,18 @@
+# Usage: /control/alias SPECTRUM <K40|B33 input file>
+#        /control/execute gamma-floor.mac
+#
+# Defines gamma source covering floor of cavern, aimed roughly toward
+# detector stack (narrow cone to allow for scattering).  Requires new
+# "target point" version of CDMSSourceBiasing (elog/493).
+#
+# 20170510  Michael Kelsey
+
+/CDMS/Source contam
+/CDMS/Contaminant/AddSpectrum {SPECTRUM}
+/CDMS/Contaminant/Volume NoLabHall
+/CDMS/Contaminant/surface
+/CDMS/Contaminant/Limit z < -2.49 m G		# Floor of lab
+/CDMS/Contaminant/BiasDirection toTarget	# Toward detector center
+/CDMS/Contaminant/Target 0. 0. -1.3 m		# Middle of stack in world
+/CDMS/Contaminant/HalfAngle 3. deg
+

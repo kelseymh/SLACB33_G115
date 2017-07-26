@@ -1,0 +1,22 @@
+# Record hits in G115 from rethrown gammas
+
+/control/execute SLACB33_G115.mac
+/CDMS/updateGeom
+
+/CDMS/Source cylinder
+/CDMS/Cylinder/Radius 38.2 mm		# Slightly larger than ZIP
+/CDMS/Cylinder/Length 8.1 mm
+/CDMS/Cylinder/AlignToVolume G115
+/CDMS/Cylinder/AddSpectrum gfile:atG115_gamma.dat
+/CDMS/Cylinder/BiasDirection localIn
+/CDMS/Cylinder/Lambertian
+
+/CDMS/writeData true
+/CDMS/writeTrees true
+/CDMS/writePrimaries false
+/CDMS/writeEmptyHits false
+/CDMS/writeEmptyEvents false
+/CDMS/writeFilePrefix G115
+
+# About 25 minutes for 10M events, 20% efficiency
+/run/beamOn 10000000

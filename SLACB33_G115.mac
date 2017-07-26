@@ -1,0 +1,19 @@
+/CDMS/Detector slac
+
+/CDMS/UseShield slac			# Use mu-metal shielding only
+/CDMS/Shield/RemoveLayer Gamma
+/CDMS/Shield/baseThickness 0. mm
+
+/control/execute G115_zip.mac		# Define G115 layout
+
+/CDMS/Layout/ZipName G115 6
+/CDMS/Layout/ZipCode Zip  6
+/CDMS/Layout/ZipName NONE 1
+
+/CDMS/Mechanical table
+/CDMS/Table/Material G4_Al
+/CDMS/Table/Height 21 inch
+/CDMS/Table/Width 27 inch
+/CDMS/Table/Depth 27 inch
+/CDMS/Table/LegWidth 2 inch
+/CDMS/AlignToCavern

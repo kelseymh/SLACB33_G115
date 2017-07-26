@@ -1,0 +1,67 @@
+From Noah Kurinsky:
+
+I think we should aim to simulate G115, a 3”x4mm Ge detector with the SNOLAB
+QETs, and compare the simulation to the data taken in the Bluefors at
+SLAC. Below is a list of tasks and timeline for getting this done, and I'm
+hoping you can take the lead on the G4CMP part of the simulation. We can
+either try to put the G4CMP part into the SuperSim simulation Mike already
+has, or have mike build the input spectrum for the G4CMP run and modify the
+example geometry to run this crystal.
+
+Once we get the list of phonon hits, we will pass off to Jon and Jorge; Jon
+will run the TES simulation and Jorge will do post-processing. Xuji and I
+are taking/analyzing the SLAC data. The idea is to have this done or mostly
+done by the collaboration meeting as a first simulation milestone for
+SNOLAB detectors and a first sanity check with detectors of the G4CMP.
+
+This, plus the charge validation I've done at Stanford, constitutes the
+first full test of G4CMP charge and phonon simulations, and will allow us to
+go forward with larger detectors at voltage when we have COMSOL models and
+data from test facilities (we already have a lot of HV data from UMN, just
+with high noise).
+
+-----
+Timeline for 0V Simulation
+
+Model Backgrounds - identify sources - DONE (Mike, Noah)
+
+SuperSim - Need to generate ~100000 detector hits given background spectrum,
+hopefully done by 8/1 – Mike (should be quick)
+
+Data - need to take pulse data to build up moderate statistics sample,
+hopefully ~10,000 pulses free of background/muons data taken by 8/4 - Noah
+
+G4CMP - need to implement G115 geometry, just needs to be a cylinder 3" in
+diameter 4mm in thickness, located at top of stack - Tyler (with help from
+Mike for SuperSim)
+
+Will take care of charge and phonon absorption
+
+Aim to be done by 8/4, run jobs over next ~3 days
+
+TES Simulation + Postprocessing - Goal of being done by collaboration
+ meeting plenary (8/13)
+
+Modify TES simulator to read in example crystal outputs, segment into iZIP
+channel layout. G115 looks like a CDMSlite detector - Jon
+
+Do CDMSlite postprocessing on data (Xuji + Noah) and DMC (Jorge)
+-------
+
+		  ========================================
+
+SuperSim macros for G115 simulation
+-----------------------------------
+
+SLACB33_G115.mac:	Defines cryostat geometry with custom ZIP detector
+G115_zip.mac:		Define custom ZIP detector dimensions (3" x 4 mm)
+gamma-floor.mac:	Throws gamma spectrum from floor toward ZIPs
+G115_draw.mac:		Cutaway view of B33 geometry, SLACB33_G115.eps
+G115_gammas.mac:	Throw gammas from floor for event production (low eff)
+raw_gammas.mac:		Generate spectrum of gammas at G115 from floor
+G115_rethrow.mac:	Rethrow gammas at G115 using raw_gammas.mac result
+G115_DMC.mac:		Use G115_rethrow output to generate G4DMC results
+
+raw_gammas.csh:		Runs raw_gammas.mac and CDMSspectrum.C on output
+
+hit_plot.C,event_sum.C:	Produce single-page plots from SuperSim mczip6 TTree

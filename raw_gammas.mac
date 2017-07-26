@@ -1,0 +1,20 @@
+# Record spectrum at G115 surface for rethrowing
+
+/control/execute SLACB33_G115.mac
+/CDMS/updateGeom
+
+/control/alias SPECTRUM gfile:{CDMS_SUPERSIM}/CDMSsources/spectra/SLACB33-Tower_gammas.dat
+/control/execute gamma-floor.mac
+
+/CDMS/Contaminant/printParam
+
+/CDMS/StepCounter spectrum
+/CDMS/SpectrumCounter/setParticleVolume * G115
+
+/CDMS/writeData true
+/CDMS/writeTrees true
+/CDMS/writeEmptyHits false
+/CDMS/writeFilePrefix atG115
+
+# Roughly half an hour for 10M events, gets ~ 230k gammas in output
+/run/beamOn 10000000

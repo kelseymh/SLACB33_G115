@@ -1,0 +1,17 @@
+# Record hits in G115 from floor gammas (no rethrowing)
+
+/control/execute SLACB33_G115.mac
+/CDMS/updateGeom
+
+/control/alias SPECTRUM gfile:{CDMS_SUPERSIM}/CDMSsources/spectra/SLACB33-Tower_gammas.dat
+/control/execute gamma-floor.mac
+
+/CDMS/writeData true
+/CDMS/writeTrees true
+/CDMS/writePrimaries false
+/CDMS/writeEmptyHits false
+/CDMS/writeEmptyEvents false
+/CDMS/writeFilePrefix G115
+
+# Roughly half an hour, 10M gets ~ 230k gammas on target
+/run/beamOn 10000000

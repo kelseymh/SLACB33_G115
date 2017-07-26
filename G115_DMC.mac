@@ -1,0 +1,30 @@
+# Zero-volt operation of G115 in BlueFors fridge
+
+/CDMS/Physics/DMC
+
+/CDMS/Detector zip
+/CDMS/Zip/Radius 38.1 mm		# 3" wafer with SNOlab HV mask
+/CDMS/Zip/Thickness 4 mm
+/CDMS/Zip/Position 0 0 2 mm		# Shift so that Z=0 at bottom face
+/CDMS/Zip/DetectorType Zip		# Generic code allows dimensions
+/CDMS/Zip/UseLattice
+/CDMS/Zip/Lattice/Orientation 1 0 0 -1
+
+/CDMS/updateGeom
+
+/CDMS/Source replay
+/CDMS/Replay/Generator dmchit
+/CDMS/Replay/FileFormat supersim
+/CDMS/Replay/InputFile G115_10170725_0000.txt
+
+/CDMS/writeData false
+/CDMS/writeTrees false
+/CDMS/writeDMC true
+/CDMS/writeFilePrefix G115
+
+# About 20 minutes per event on average!
+
+# Process event #5 with verbosity to check position
+/run/beamOn 4
+/CDMS/Replay/verbose 3
+/run/beamOn 1

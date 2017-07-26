@@ -1,0 +1,7 @@
+/control/execute SLACB33_G115.mac
+/CDMS/updateGeom
+
+/CDMS/Layout/printParam
+/CDMS/Housing/printParam
+
+/control/execute {CDMS_SUPERSIM}/CDMSmacros/util/list-volumes.mac

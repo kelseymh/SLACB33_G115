@@ -1,0 +1,8 @@
+/CDMS/AddZip G115
+/CDMS/G115/Radius 38.1 mm		# 3" wafer with SNOlab HV mask
+/CDMS/G115/Thickness 4 mm
+/CDMS/G115/ClearanceZ 31.33 mm		# SNOLAB housing spacing
+/CDMS/G115/ClearanceR 12.57 mm		# 3" wafer in 4" housing
+/CDMS/G115/DetectorType Zip		# Generic code allows dimensions
+/CDMS/G115/IsSensitive true
+/CDMS/G115/WriteDMCcoords true

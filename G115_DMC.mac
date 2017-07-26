@@ -15,7 +15,7 @@
 /CDMS/Source replay
 /CDMS/Replay/Generator dmchit
 /CDMS/Replay/FileFormat supersim
-/CDMS/Replay/InputFile G115_10170725_0000.txt
+/CDMS/Replay/InputFile data/G115_hits-test.txt	# Replace with real data file!
 
 /CDMS/writeData false
 /CDMS/writeTrees false

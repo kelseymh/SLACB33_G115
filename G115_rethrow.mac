@@ -7,7 +7,7 @@
 /CDMS/Cylinder/Radius 38.2 mm		# Slightly larger than ZIP
 /CDMS/Cylinder/Length 8.1 mm
 /CDMS/Cylinder/AlignToVolume G115
-/CDMS/Cylinder/AddSpectrum gfile:atG115_gamma.dat
+/CDMS/Cylinder/AddSpectrum gfile:data/atG115_gamma.dat
 /CDMS/Cylinder/BiasDirection localIn
 /CDMS/Cylinder/Lambertian
 

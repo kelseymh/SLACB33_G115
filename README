@@ -50,6 +50,31 @@ Do CDMSlite postprocessing on data (Xuji + Noah) and DMC (Jorge)
 
 		  ========================================
 
+Building and running for end-to-end simulation
+
+1)  Check out and build G4CMP "develop" branch, source g4cmp_env.* script
+
+2)  Check out and build SuperSim "develop" branch, source CDMSbuild/g4setup.*
+
+3)  Switch back to this directory.
+
+4)  Generate raw gammas from B33 floor and process for rethrowing.
+
+	$ raw_gammas.csh
+
+5)  Move rethrowing file into data/ directory
+
+	$ mv atG115_gamma.dat
+
+6)  Generate SuperSim hits output using rethrowing spectrum
+
+	$ CDMS_SimDraw G115_rethrow.mac >&! G115_rethrow.log
+
+7)  Edit DMC job (G115_DMC.mac) to point to new SuperSim hits file, then run
+
+	$ CDMS_G4DMC G115_DMC.mac >&! G115_DMC.log
+
+
 SuperSim macros for G115 simulation
 -----------------------------------
 

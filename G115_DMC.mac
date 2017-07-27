@@ -23,8 +23,5 @@
 /CDMS/writeFilePrefix G115
 
 # About 20 minutes per event on average!
-
-# Process event #5 with verbosity to check position
-/run/beamOn 4
-/CDMS/Replay/verbose 3
-/run/beamOn 1
+/CDMS/Replay/verbose 1
+/run/beamOn 10

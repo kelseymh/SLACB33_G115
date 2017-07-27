@@ -52,9 +52,26 @@ Do CDMSlite postprocessing on data (Xuji + Noah) and DMC (Jorge)
 
 Building and running for end-to-end simulation
 
+0)  Configure your session with Geant4 environment variables.
+
+	$ source <G4-path>/share/Geant4-10.x.y/geant4make/geant4make.csh
+
 1)  Check out and build G4CMP "develop" branch, source g4cmp_env.* script
 
+	$ git clone https://github.com/kelseymh/G4CMP
+	$ make all
+	$ source g4cmp_env.csh	(or .sh for Bash)
+
+    You make also build using CMake, following the README instructions.
+
 2)  Check out and build SuperSim "develop" branch, source CDMSbuild/g4setup.*
+
+	https://confluence.slac.stanford.edu/display/CDMS/SuperCDMS+Simulation
+
+	$ git clone ssh://titus.stanford.edu/data/git/Simulations/supersim
+	$ CDMSbuild/setup
+	$ source CDMSbuild/g4setup.csh
+	$ make all
 
 3)  Switch back to this directory.
 

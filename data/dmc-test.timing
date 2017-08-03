@@ -1,0 +1,97 @@
+
+*************************************************************
+ Geant4 version Name: geant4-10-02-patch-03    (27-January-2017)
+                      Copyright : Geant4 Collaboration
+                      Reference : NIM A 506 (2003), 250-303
+                            WWW : http://cern.ch/geant4
+*************************************************************
+
+ G4PhysicsListHelper::AddTransportation()--- G4CoupledTransportation is used 
+CDMSOutputManager::GetLaboratoryCode
+ Lab geometry NoLab found, setting code to 0
+CDMSVSimOutput::SetupFile: timing_10170801_0000.txt
+Writing G4DMC hits to timing_10170801_0000_DMC.txt
+Replay::OpenInputFile dmc-test.dat
+ ready to process tracks...
+G4CMPEnergyPartition: (0,0,12.69) in volume Zip
+G4CMPEnergyPartition::DoPartition: ParticleID 11; eTotal 1e-06 MeV; eNIEL 0 MeV
+ GenerateCharges 1e-06 MeV
+ GeneratePhonons 1.93242e-06 MeV
+G4CMPEnergyPartition::GetPrimaries
+CDMSOutputManager::GetLaboratoryCode
+ Lab geometry NoLab found, setting code to 0
+Run 0: User=10.24s Real=10.29s Sys=0.04s
+CDMSVSimOutput::SetupFile: timing_10170801_0001.txt
+Writing G4DMC hits to timing_10170801_0001_DMC.txt
+Replay::OpenInputFile dmc-test.dat
+G4CMPEnergyPartition: (0,0,12.69) in volume Zip
+G4CMPEnergyPartition::DoPartition: ParticleID 11; eTotal 1e-05 MeV; eNIEL 0 MeV
+ GenerateCharges 1e-05 MeV
+ GeneratePhonons 2.57712e-06 MeV
+G4CMPEnergyPartition::GetPrimaries
+CDMSOutputManager::GetLaboratoryCode
+ Lab geometry NoLab found, setting code to 0
+Run 1: User=85.37s Real=85.76s Sys=0.26s
+CDMSVSimOutput::SetupFile: timing_10170801_0002.txt
+Writing G4DMC hits to timing_10170801_0002_DMC.txt
+Replay::OpenInputFile dmc-test.dat
+G4CMPEnergyPartition: (0,0,12.69) in volume Zip
+G4CMPEnergyPartition::DoPartition: ParticleID 11; eTotal 5e-05 MeV; eNIEL 0 MeV
+ GenerateCharges 5e-05 MeV
+ GeneratePhonons 1.2043447417563e-06 MeV
+G4CMPEnergyPartition::GetPrimaries
+CDMSOutputManager::GetLaboratoryCode
+ Lab geometry NoLab found, setting code to 0
+Run 2: User=394.96s Real=396.65s Sys=1.17s
+CDMSVSimOutput::SetupFile: timing_10170801_0003.txt
+Writing G4DMC hits to timing_10170801_0003_DMC.txt
+Replay::OpenInputFile dmc-test.dat
+G4CMPEnergyPartition: (0,0,12.69) in volume Zip
+G4CMPEnergyPartition::DoPartition: ParticleID 11; eTotal 0.0001 MeV; eNIEL 0 MeV
+ GenerateCharges 0.0001 MeV
+ GeneratePhonons 1.8337857418995e-06 MeV
+G4CMPEnergyPartition::GetPrimaries
+CDMSOutputManager::GetLaboratoryCode
+ Lab geometry NoLab found, setting code to 0
+Run 3: User=853.6s Real=857.61s Sys=2.65s
+CDMSVSimOutput::SetupFile: timing_10170801_0004.txt
+Writing G4DMC hits to timing_10170801_0004_DMC.txt
+Replay::OpenInputFile dmc-test.dat
+G4CMPEnergyPartition: (0,0,12.69) in volume Zip
+G4CMPEnergyPartition::DoPartition: ParticleID 11; eTotal 0.0005 MeV; eNIEL 0 MeV
+ GenerateCharges 0.0005 MeV
+ GeneratePhonons 2.0440832965539e-06 MeV
+G4CMPEnergyPartition::GetPrimaries
+CDMSOutputManager::GetLaboratoryCode
+ Lab geometry NoLab found, setting code to 0
+Run 4: User=4093.6s Real=4127.07s Sys=16.66s
+CDMSVSimOutput::SetupFile: timing_10170801_0005.txt
+Writing G4DMC hits to timing_10170801_0005_DMC.txt
+Replay::OpenInputFile dmc-test.dat
+G4CMPEnergyPartition: (0,0,12.69) in volume Zip
+G4CMPEnergyPartition::DoPartition: ParticleID 11; eTotal 0.001 MeV; eNIEL 0 MeV
+ GenerateCharges 0.001 MeV
+ GeneratePhonons 3.4903443769609e-07 MeV
+G4CMPEnergyPartition::GetPrimaries
+CDMSOutputManager::GetLaboratoryCode
+ Lab geometry NoLab found, setting code to 0
+Run 5: User=8035.37s Real=8179.67s Sys=32.94s
+CDMSVSimOutput::SetupFile: timing_10170801_0006.txt
+Writing G4DMC hits to timing_10170801_0006_DMC.txt
+Replay::OpenInputFile dmc-test.dat
+G4CMPEnergyPartition: (0,0,12.69) in volume Zip
+G4CMPEnergyPartition::DoPartition: ParticleID 11; eTotal 0.005 MeV; eNIEL 0 MeV
+ GenerateCharges 0.005 MeV
+ GeneratePhonons 2.9108805817051e-06 MeV
+G4CMPEnergyPartition::GetPrimaries
+CDMSOutputManager::GetLaboratoryCode
+ Lab geometry NoLab found, setting code to 0
+Run 6: User=41061.08s Real=51003.19s Sys=345.59s
+CDMSVSimOutput::SetupFile: timing_10170802_0007.txt
+Writing G4DMC hits to timing_10170802_0007_DMC.txt
+Replay::OpenInputFile dmc-test.dat
+G4CMPEnergyPartition: (0,0,12.69) in volume Zip
+G4CMPEnergyPartition::DoPartition: ParticleID 11; eTotal 0.01 MeV; eNIEL 0 MeV
+ GenerateCharges 0.01 MeV
+ GeneratePhonons 1.3146913103385e-06 MeV
+G4CMPEnergyPartition::GetPrimaries

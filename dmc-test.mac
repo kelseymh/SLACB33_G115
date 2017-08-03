@@ -1,0 +1,36 @@
+/CDMS/Physics/DMC
+
+/CDMS/Detector zip
+/CDMS/Zip/UseEMField
+/CDMS/Zip/EMField/Voltage 4 V -1
+/CDMS/Zip/UseLattice
+/CDMS/Zip/Lattice/Orientation 1 0 0 -1
+/CDMS/Zip/Position 0 0 16.665 mm
+/CDMS/updateGeom
+
+/CDMS/Source replay
+/CDMS/Replay/Generator dmchit
+/CDMS/Replay/FileFormat matlab
+/CDMS/Replay/InputFile dmc-test.dat
+
+/CDMS/writeTrees false
+/CDMS/writeData false
+/CDMS/writeDMC true
+/CDMS/writeFilePrefix timing
+
+/g4cmp/producePhonons 1.	// Primaries, Luke, and downconversion
+/g4cmp/produceCharges 1.
+
+/CDMS/Replay/verbose 1
+/CDMS/Output/verbose 1
+### /tracking/verbose 1
+
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1

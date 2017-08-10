@@ -1,0 +1,7 @@
+# G124 testing in SLAC BlueFors cryostat -- x6 stack and tower, no shielding
+#
+# 20170810  Make G124 sensitive, G115 not.
+
+/control/execute SLACB33_G115.mac
+/CDMS/G115/IsSensitive false
+/CDMS/Zip/IsSensitive true

@@ -4,10 +4,10 @@
 /CDMS/updateGeom
 
 /CDMS/Source cylinder
-/CDMS/Cylinder/Radius 38.2 mm		# Slightly larger than ZIP
-/CDMS/Cylinder/Length 8.1 mm
-/CDMS/Cylinder/AlignToVolume G115
-/CDMS/Cylinder/AddSpectrum gfile:data/atG115_gamma.dat
+/CDMS/Cylinder/Radius 50.1 mm		# Slightly larger than ZIP
+/CDMS/Cylinder/Length 33.6 mm
+/CDMS/Cylinder/AlignToVolume Zip
+/CDMS/Cylinder/AddSpectrum gfile:data/atG124_gamma.dat
 /CDMS/Cylinder/BiasDirection localIn
 /CDMS/Cylinder/Lambertian
 
@@ -24,8 +24,8 @@
 # Offset side view with detector cutaway
 /vis/viewer/addCutawayPlane 0 0 0 m 0 1 0
 /vis/viewer/set/viewpointVector 0. -1 0.
-/vis/viewer/zoomTo 25.
-/vis/viewer/panTo 2 8 cm
+/vis/viewer/zoomTo 22.
+/vis/viewer/panTo 2 1 cm
 /vis/drawVolume
 /vis/viewer/refresh 
 

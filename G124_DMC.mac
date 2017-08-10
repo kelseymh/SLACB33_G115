@@ -1,0 +1,24 @@
+# Zero-volt operation of G115 in BlueFors fridge
+
+/CDMS/Physics/DMC
+
+/CDMS/Detector Zip
+/CDMS/Zip/Position 0 0 16.665 mm	# Shift so that Z=0 at bottom face
+/CDMS/Zip/UseLattice
+/CDMS/Zip/Lattice/Orientation 1 0 0 -1
+
+/CDMS/updateGeom
+
+/CDMS/Source replay
+/CDMS/Replay/Generator dmchit
+/CDMS/Replay/FileFormat supersim
+/CDMS/Replay/InputFile data/G124_hits-test.txt	# Replace with real data file!
+
+/CDMS/writeData false
+/CDMS/writeTrees false
+/CDMS/writeDMC true
+/CDMS/writeFilePrefix G124
+
+# About 20 minutes per event on average!
+/CDMS/Replay/verbose 1
+/run/beamOn 10

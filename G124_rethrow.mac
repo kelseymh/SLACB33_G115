@@ -1,0 +1,22 @@
+# Record hits in G124 from rethrown gammas
+
+/control/execute SLACB33_G124.mac
+/CDMS/updateGeom
+
+/CDMS/Source cylinder
+/CDMS/Cylinder/Radius 50.1 mm		# Slightly larger than ZIP
+/CDMS/Cylinder/Length 33.6 mm
+/CDMS/Cylinder/AlignToVolume Zip
+/CDMS/Cylinder/AddSpectrum gfile:data/atG124_gamma.dat
+/CDMS/Cylinder/BiasDirection localIn
+/CDMS/Cylinder/Lambertian
+
+/CDMS/writeData true
+/CDMS/writeTrees true
+/CDMS/writePrimaries false
+/CDMS/writeEmptyHits false
+/CDMS/writeEmptyEvents false
+/CDMS/writeFilePrefix G124
+
+# About 25 minutes for 10M events, 20% efficiency
+/run/beamOn 10000000

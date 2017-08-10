@@ -75,35 +75,47 @@ Building and running for end-to-end simulation
 
 3)  Switch back to this directory.
 
-4)  Generate raw gammas from B33 floor and process for rethrowing.
+4)  Generate raw gammas from B33 floor and process for rethrowing.  Edit
+    file to select either G115 or G124 (Zip).
 
 	$ raw_gammas.csh
 
 5)  Move rethrowing file into data/ directory
 
-	$ mv atG115_gamma.dat
+	$ mv atG115_gamma.dat data/
+	$ mv atG124_gamma.dat data/
 
 6)  Generate SuperSim hits output using rethrowing spectrum
 
 	$ CDMS_SimDraw G115_rethrow.mac >&! G115_rethrow.log
+	$ CDMS_SimDraw G124_rethrow.mac >&! G124_rethrow.log
 
 7)  Edit DMC job (G115_DMC.mac) to point to new SuperSim hits file, then run
 
 	$ CDMS_G4DMC G115_DMC.mac >&! G115_DMC.log
+	$ CDMS_G4DMC G124_DMC.mac >&! G124_DMC.log
 
 
 SuperSim macros for G115 simulation
 -----------------------------------
 
 SLACB33_G115.mac:	Defines cryostat geometry with custom ZIP detector
+SLACB33_G124.mac:	As above, but makes regular G124 active, G115 not.
 G115_zip.mac:		Define custom ZIP detector dimensions (3" x 4 mm)
-gamma-floor.mac:	Throws gamma spectrum from floor toward ZIPs
 G115_draw.mac:		Cutaway view of B33 geometry, SLACB33_G115.eps
+gamma-floor.mac:	Draws gamma spectrum from floor toward ZIPs
+
 G115_gammas.mac:	Throw gammas from floor for event production (low eff)
-raw_gammas.mac:		Generate spectrum of gammas at G115 from floor
+
+raw_gammas.mac:		Generate spectrum of gammas at G115 or G124 from floor
 G115_rethrow.mac:	Rethrow gammas at G115 using raw_gammas.mac result
+G124_rethrow.mac:	Rethrow gammas at G124 using raw_gammas.mac result
 G115_DMC.mac:		Use G115_rethrow output to generate G4DMC results
+G124_DMC.mac:		Use G115_rethrow output to generate G4DMC results
 
 raw_gammas.csh:		Runs raw_gammas.mac and CDMSspectrum.C on output
 
-hit_plot.C,event_sum.C:	Produce single-page plots from SuperSim mczip6 TTree
+hit_plot.C
+event_sum.C
+lowE_events.C
+gamma_flux.C:		Produce single-page plots from SuperSim mczip6 TTree

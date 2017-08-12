@@ -23,5 +23,4 @@
 /CDMS/writeFilePrefix G115
 
 # About 20 minutes per event on average!
-/CDMS/Replay/verbose 1
 /run/beamOn 10

@@ -2,7 +2,7 @@
 
 /CDMS/Physics/DMC
 
-/CDMS/Detector Zip
+/CDMS/Detector zip
 /CDMS/Zip/Position 0 0 16.665 mm	# Shift so that Z=0 at bottom face
 /CDMS/Zip/UseLattice
 /CDMS/Zip/Lattice/Orientation 1 0 0 -1

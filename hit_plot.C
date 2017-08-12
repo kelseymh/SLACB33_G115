@@ -1,8 +1,9 @@
 // Plot individual hit data for SuperSim hits, for ZIP #6 (G115)
 //
-// Usage: root -b hit_plot.C("filename", "variable")
+// Usage: root -b hit_plot.C("filename", "variable", "mczip6")
 //
 // 20170725  Michael Kelsey
+// 20170811  Extend support to other trees (mczip4 is G124)
 
 #include "TFile.h"
 #include "TString.h"
@@ -13,24 +14,24 @@ void exitmsg(const TString& msg, Int_t exitcode) {
 }
 
 
-int hit_plot(TString fname, TString var) {
+int hit_plot(TString fname, TString var, TString tree="mczip6") {
   TFile file(fname);
   if (!file.IsOpen()) exitmsg("Unable to open file "+fname, 2);
 
-  TTree* mczip6 = 0;
-  file.GetObject("/G4SimDir/mczip6", mczip6);
-  if (!mczip6) exitmsg("Can't find mczip6 TTree", 1);
+  TTree* mczip = 0;
+  file.GetObject("/G4SimDir/"+tree, mczip);
+  if (!mczip) exitmsg("Can't find "+tree+" TTree", 1);
 
   Double_t evnum;	// Reusable buffers for processing events
   Double_t thevar;
-  mczip6->SetBranchAddress("EventNum", &evnum);
-  mczip6->SetBranchAddress(var, &thevar);
+  mczip->SetBranchAddress("EventNum", &evnum);
+  mczip->SetBranchAddress(var, &thevar);
 
   // Get variable range for plotting
-  Double_t varmin = mczip6->GetMinimum(var);
+  Double_t varmin = mczip->GetMinimum(var);
   varmin *= (varmin<0.) ? 1.1 : 0.9;
 
-  Double_t varmax = mczip6->GetMaximum(var);
+  Double_t varmax = mczip->GetMaximum(var);
   varmax *= (varmax<0.) ? 0.9 : 1.1;
 
   TH1F varplot(var.Data(),(var+" : Single Hits").Data(),100,varmin,varmax);
@@ -39,9 +40,9 @@ int hit_plot(TString fname, TString var) {
   Double_t varsum = 0.;
 
   // Fill histogram with variable 
-  Int_t nhits = mczip6->GetEntries();
+  Int_t nhits = mczip->GetEntries();
   for (Int_t i=0; i<nhits; i++) {
-    mczip6->GetEntry(i);
+    mczip->GetEntry(i);
     varplot.Fill(thevar, 1.);
   }
 

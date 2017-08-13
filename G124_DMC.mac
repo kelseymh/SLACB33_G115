@@ -14,6 +14,9 @@
 /CDMS/Replay/FileFormat supersim
 /CDMS/Replay/InputFile data/G124_hits-test.txt	# Replace with real data file!
 
+/g4cmp/producePhonons 1.			# No downsampling!
+/g4cmp/produceCharges 1.
+
 /CDMS/writeData false
 /CDMS/writeTrees false
 /CDMS/writeDMC true
@@ -21,4 +24,4 @@
 
 # About 20 minutes per event on average!
 /CDMS/Replay/verbose 1
-/run/beamOn 10
+/run/beamOn 2

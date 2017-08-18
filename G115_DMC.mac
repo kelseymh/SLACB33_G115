@@ -1,4 +1,4 @@
-# Zero-volt operation of G115 in BlueFors fridge
+# Zero-volt operation of G124 in BlueFors fridge
 
 /CDMS/Physics/DMC
 
@@ -26,4 +26,5 @@
 /CDMS/writeFilePrefix G115
 
 # About 20 minutes per event on average!
+/CDMS/Replay/verbose 1
 /run/beamOn 2

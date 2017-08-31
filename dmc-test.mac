@@ -11,7 +11,7 @@
 /CDMS/Source replay
 /CDMS/Replay/Generator dmchit
 /CDMS/Replay/FileFormat matlab
-/CDMS/Replay/InputFile dmc-test.dat
+/CDMS/Replay/InputFile data/dmc-test.dat
 
 /CDMS/writeTrees false
 /CDMS/writeData false

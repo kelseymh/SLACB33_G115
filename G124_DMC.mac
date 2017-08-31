@@ -1,4 +1,4 @@
-# Zero-volt operation of G115 in BlueFors fridge
+# Zero-volt operation of G124 in BlueFors fridge
 
 /CDMS/Physics/DMC
 
@@ -14,14 +14,11 @@
 /CDMS/Replay/FileFormat supersim
 /CDMS/Replay/InputFile data/G124_hits-test.txt	# Replace with real data file!
 
-/g4cmp/producePhonons 1.			# No downsampling!
-/g4cmp/produceCharges 1.
-
 /CDMS/writeData false
 /CDMS/writeTrees false
 /CDMS/writeDMC true
 /CDMS/writeFilePrefix G124
 
-# About 20 minutes per event on average!
+/g4cmp/samplingEnergy 100 eV		# About 7 minutes per event
 /CDMS/Replay/verbose 1
-/run/beamOn 2
+/run/beamOn 10
